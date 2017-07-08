@@ -19,6 +19,17 @@ namespace RichMarkdownBox
 {
     public sealed partial class MarkdownEditControl : UserControl
     {
+        public RichMarkdownBox Editor
+        {
+            get
+            {
+                return editor;
+            }
+        }
+        public void setMarkdown(string m)
+        {
+            editor.setMarkdown(m);
+        }
         public string getMarkdown()
         {
             return editor.getMarkdown();

@@ -27,9 +27,14 @@ namespace Demo
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            prev.Text = con.getMarkdown();
+            testBox.Text = con.getMarkdown();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            con.Editor.setMarkdown(testBox.Text);
         }
     }
 }

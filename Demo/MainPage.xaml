@@ -9,8 +9,10 @@
     mc:Ignorable="d">
 
     <StackPanel>
+        <TextBlock Text="Markdown Control:"/>
         <md:MarkdownEditControl x:Name="con"/>
-        <Button Click="Button_Click" Content="Get Markdown"/>
-        <TextBlock x:Name="prev"/>
+        <Button Click="Button_Click" Content="Get Markdown from the Markdown Control and put it into the TextBox"/>
+        <Button Click="Button_Click_1" Content="Get Markdown formatted text from the TextBox and put it into the Markdown Control"/>
+        <TextBox Header="TextBox:" x:Name="testBox"/>
     </StackPanel>
 </Page>

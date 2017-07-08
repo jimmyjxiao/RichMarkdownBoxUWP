@@ -132,6 +132,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MarkdownToRichTextHandler\MarkdownToRichTextHandler.vcxproj">
+      <Project>{7d1e75d9-f9c6-449f-8680-3319bec0c356}</Project>
+      <Name>MarkdownToRichTextHandler</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RichMarkdownBox.csproj">
       <Project>{86b23452-e8d1-4bb1-8de2-07f5964cf446}</Project>
       <Name>RichMarkdownBox</Name>

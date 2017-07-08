@@ -6,11 +6,13 @@ namespace RichMarkdownBox
    
     public sealed class RichMarkdownBox : Windows.UI.Xaml.Controls.RichEditBox
     {
+        private MarkdownToRichTextHandler.MarkdownHelper markHelper;
         public RichMarkdownBox()
         {
             var c = Document.GetDefaultCharacterFormat();
             c.Size = 16;
             Document.SetDefaultCharacterFormat(c);
+            markHelper = new MarkdownToRichTextHandler.MarkdownHelper(Document);
             Paste += RichMarkdownBox_Paste;
         }
         private async void RichMarkdownBox_Paste(object sender, Windows.UI.Xaml.Controls.TextControlPasteEventArgs e)
@@ -25,7 +27,10 @@ namespace RichMarkdownBox
                 Document.Selection.SetText(Windows.UI.Text.TextSetOptions.ApplyRtfDocumentDefaults, plaintext);
             }
         }
-
+        public void setMarkdown(string md)
+        {
+            markHelper.setMarkdowntoDocument(md);
+        }
         public string getMarkdown()
         {
             // Takes a RichEditBox control and returns a 

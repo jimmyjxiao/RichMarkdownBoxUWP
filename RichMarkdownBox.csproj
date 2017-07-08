@@ -125,6 +125,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MarkdownToRichTextHandler\MarkdownToRichTextHandler.vcxproj">
+      <Project>{7d1e75d9-f9c6-449f-8680-3319bec0c356}</Project>
+      <Name>MarkdownToRichTextHandler</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
